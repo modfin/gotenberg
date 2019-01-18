@@ -19,7 +19,7 @@ RUN echo "deb http://httpredir.debian.org/debian/ stretch main contrib non-free"
 # | recovering. In our case: Chrome (headless) and Office (headless). 
 # |
 
-RUN curl -sL https://raw.githubusercontent.com/Unitech/pm2/master/packager/setup.deb.sh | bash -
+RUN curl -s https://packagecloud.io/install/repositories/Keymetrics/pm2/script.deb.sh | bash
 
 # |--------------------------------------------------------------------------
 # | Chrome
@@ -27,10 +27,9 @@ RUN curl -sL https://raw.githubusercontent.com/Unitech/pm2/master/packager/setup
 # |
 # | Installs Chrome for HTML and Markdown conversions.
 # |
-
-RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - &&\
-    echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | tee /etc/apt/sources.list.d/google-chrome.list &&\
-    apt-get update &&\
+RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
+RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | tee /etc/apt/sources.list.d/google-chrome.list
+RUN apt-get update &&\
     apt-get -y install google-chrome-stable
 
 # |--------------------------------------------------------------------------

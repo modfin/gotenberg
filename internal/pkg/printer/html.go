@@ -44,7 +44,7 @@ func (html *HTML) Print(destination string) error {
 		return fmt.Errorf("creating DevTools target: %v", err)
 	}
 	// open a new RPC connection to the Chrome Debugging Protocol target.
-	conn, err := rpcc.DialContext(html.Context, devt.WebSocketDebuggerURL)
+	conn, err := rpcc.DialContext(html.Context, devt.WebSocketDebuggerURL, rpcc.WithWriteBufferSize(104857586))
 	if err != nil {
 		return fmt.Errorf("creating RPC connection: %v", err)
 	}
