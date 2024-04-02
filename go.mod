@@ -5,15 +5,17 @@ require (
 	github.com/labstack/echo v0.0.0-20181123063703-c7eb8da9ec73
 	github.com/labstack/gommon v0.2.8
 	github.com/mafredri/cdp v0.20.0
-	github.com/microcosm-cc/bluemonday v1.0.1
+	github.com/microcosm-cc/bluemonday v1.0.26
 	github.com/russross/blackfriday/v2 v2.0.1
 	github.com/stretchr/testify v1.2.2
 )
 
 require (
+	github.com/aymerick/douceur v0.2.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/google/go-cmp v0.2.0 // indirect
+	github.com/gorilla/css v1.0.0 // indirect
 	github.com/gorilla/websocket v1.4.1 // indirect
 	github.com/mattn/go-colorable v0.0.9 // indirect
 	github.com/mattn/go-isatty v0.0.4 // indirect
